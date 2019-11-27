@@ -12,13 +12,13 @@
                         <span id="reauth-email" class="reauth-email"></span>
                         <div class="position-relative">
                             <img src="../assets/user-icon.png" />
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="username" [(ngModel)]="username"  autofocus>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="username" [(ngModel)]="user.username"  autofocus>
                         </div>
                         <div class="position-relative">
                             <img src="assets/password-icon.png" />
-                            <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" [(ngModel)]="password" >
+                            <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" [(ngModel)]="user.password" >
                         </div>
-                        <button type="submit" routerLink="/users-list">Sign in</button>
+                        <button type="submit" (click)="login(user)">Sign in</button>
                         <a routerLink="/forgot-password" class="forgot-password pull-right">Forgot the password?</a>
                     </form>
                 </div>
